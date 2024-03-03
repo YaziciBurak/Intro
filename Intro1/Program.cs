@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Intro1.Business;
-using Intro1.DataAccess.Concrates;
-using Intro1.Entities;
+using Test1.Business;
+using Test1.DataAccess.Concrates;
+using Test1.Entities;
 
 Console.WriteLine("Hello, World!");
 

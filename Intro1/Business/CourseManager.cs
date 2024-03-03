@@ -1,13 +1,13 @@
-﻿using Intro1.DataAccess.Absctracts;
-using Intro1.DataAccess.Concrates;
-using Intro1.Entities;
+﻿using Test1.DataAccess.Absctracts;
+using Test1.DataAccess.Concrates;
+using Test1.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Intro1.Business;
+namespace Test1.Business;
 
     public class CourseManager
   {

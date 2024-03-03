@@ -1,12 +1,12 @@
-﻿using Intro1.DataAccess.Absctracts;
-using Intro1.Entities;
+﻿using Test1.DataAccess.Absctracts;
+using Test1.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Intro1.DataAccess.Concrates
+namespace Test1.DataAccess.Concrates
 {
     public class EfCourseDal: ICourseDal
     {

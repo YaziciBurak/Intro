@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Intro1.Entities;
+namespace Test1.Entities;
 
 public class Course
 {
