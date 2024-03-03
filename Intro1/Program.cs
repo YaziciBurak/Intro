@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Intro1.Business;
+using Intro1.DataAccess.Concrates;
 using Intro1.Entities;
 
 Console.WriteLine("Hello, World!");
@@ -35,12 +36,50 @@ for (int i = 0; i < loans.Length; i++)
 
 Console.WriteLine("Kod bitti");
 
-CourseManager courseManager = new();
-Course[] courses2 = courseManager.GetAll();
+CourseManager courseManager = new(new DapperCourseDal());
 
-for (int i = 0; i < courses2.Length; i++)
+List<Course> courses2 = courseManager.GetAll();
+
+for (int i = 0; i < courses2.Count; i++)
 {
     Console.WriteLine(courses2[i].Name + " / " + courses2[i].Price);
 }
 
+
+IndividualCustomer customer1 = new IndividualCustomer();
+
+customer1.Id = 1;
+customer1.NationalIdentity = "12345678";
+customer1.FirstName = "Aslı";
+customer1.LastName = "Karayiğit";
+customer1.CustomerNumber = "123456";
+
+IndividualCustomer customer2 = new IndividualCustomer();
+
+customer2.Id = 2;
+customer2.NationalIdentity = "58494815";
+customer2.FirstName = "Özgür";
+customer2.LastName = "atılgan";
+customer2.CustomerNumber = "405961";
+
+CoorporateCustomer customer3 = new CoorporateCustomer();
+
+customer3.Id = 3;
+customer3.Name = "Kodlama.io";
+customer3.CustomerNumber = "65447";
+customer3.TaxNumber = "55917851951";
+
+CoorporateCustomer customer4 = new CoorporateCustomer();
+
+customer4.Id = 4;
+customer4.Name = "Abc";
+customer4.CustomerNumber = "985151";
+customer4.TaxNumber = "234581681";
+
+BaseCustomer[] customers = { customer1, customer2, customer3, customer4 };
+
+foreach (BaseCustomer customer in customers)
+{
+    Console.WriteLine(customer.CustomerNumber);
+}
 
